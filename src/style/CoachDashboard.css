@@ -100,6 +100,31 @@
   padding-top: 0.8rem;
   border-top: 1px solid #eee;
 }
+.coach-dashboard {
+  position: relative;
+  background-image: url('https://images.unsplash.com/photo-1542766788-a2f588f447ee?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  color: white;
+  z-index: 0;
+}
+
+.coach-dashboard::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(255, 247, 247, 0.744); /* blanc semi-transparent */
+  z-index: 1;
+  pointer-events: none; /* pour que ça ne bloque pas les clics */
+}
+
+.coach-dashboard > * {
+  position: relative;
+  z-index: 2; /* contenu au-dessus de l’overlay */
+}
+
 
 .action-btn {
   display: flex;
@@ -295,7 +320,7 @@
 /* Sidebar Styles */
 .dashboard-sidebar {
   width: 300px;
-  background: linear-gradient(135deg, var(--primary), #8c7ae6);
+background-color: #4630ef; /* bleu clair */
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -364,7 +389,7 @@
 
 .logout-btn {
   margin-top: auto;
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
   border: none;
   color: white;
   padding: 0.8rem;
