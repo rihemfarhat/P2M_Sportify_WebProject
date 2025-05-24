@@ -1,0 +1,338 @@
+/* src/style/DietDetails.css */
+
+/* Variables de couleurs */
+:root {
+    --primary: #4c56af;         /* Vert santé */
+    --secondary: #FF9800;       /* Orange énergique */
+    --light: #f8f9fa;
+    --dark: #2c3e50;
+    --accent: #2a1bb4;          /* Vert clair */
+    --text: #333;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .diet-details-page {
+    max-width: 100%;
+    margin: 0 auto;
+    color: var(--text);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+  }
+  
+  
+  /* Bannière avec effet de dégradé */
+  .diet-banner {
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    margin-bottom: 40px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: flex-end;
+  }
+  
+  .diet-banner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(41, 38, 38, 0.4); /* Noir semi-transparent */
+    z-index: 1;
+  }
+  
+
+  
+  .banner-overlay {
+    width: 100%;
+    padding: 30px;
+    color: white;
+    font-weight: 1000;
+    position: relative; /* 🔑 Nécessaire pour que z-index fonctionne */
+    z-index: 2;          /* 🔝 Plus que l'overlay */
+  }
+  
+  
+  .diet-banner h1 {
+    font-size: 3rem;
+    margin: 0;
+    font-weight: 700;
+    color: #ffffff;
+  }
+  .diet-banner p {
+    margin: 0;
+    font-weight: 500;
+    color: #ffffff;
+  }
+  
+  
+  .diet-short-desc {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-top: 10px;
+  }
+  
+  /* Layout principal */
+  .diet-content-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  
+  /* Sections principales */
+  .diet-section {
+    margin-bottom: 40px;
+    background: white;
+
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    border-left: 5px solid var(--primary);
+  }
+  
+  .diet-section h2 {
+    color: var(--primary);
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    position: relative;
+    padding-bottom: 10px;
+  }
+  
+  .diet-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--secondary);
+  }
+  
+  .diet-section h3 {
+    color: var(--secondary);
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+  }
+  
+  /* Listes stylisées */
+  .feature-list, .benefits-list {
+    padding-left: 0;
+    list-style: none;
+  }
+  
+  .feature-list li, .benefits-list li {
+    margin-bottom: 12px;
+    padding-left: 30px;
+    position: relative;
+  }
+  
+  .feature-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  .benefits-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--secondary);
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+  
+  /* Plan de repas */
+  .meal-plan {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(0,0,0,0.05);
+  }
+  
+  .meal-time {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #ddd;
+  }
+  
+  .meal-time:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  
+  .meal-time h4 {
+    color: var(--dark);
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .meal-time h4::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: var(--accent);
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  /* Macros nutritionnelles */
+  .macros-display {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .macro-carbs, .macro-protein, .macro-fat {
+    flex: 1;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 0 5px;
+    background: white;
+    box-shadow: var(--shadow);
+  }
+  
+  .macro-carbs h4, .macro-protein h4, .macro-fat h4 {
+    color: white;
+    margin-top: 0;
+    padding: 8px;
+    border-radius: 4px;
+  }
+  
+  .macro-carbs h4 { background: var(--primary); }
+  .macro-protein h4 { background: #2196F3; }
+  .macro-fat h4 { background: #FF5722; }
+  
+  /* Boutons et liens */
+  .resource-btn {
+    display: inline-flex; /* Mieux que block pour aligner texte + centrer */
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-weight: 600 !important;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 12px;
+    margin-bottom: 12px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+    box-sizing: border-box; /* Assure que padding ne change pas la largeur */
+  }
+  
+  
+  .resource-btn:hover {
+    background: #d47604;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  }
+  
+  .comparison-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: var(--secondary);
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  .comparison-link:hover {
+    background: #e68a00;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  }
+  
+  /* Message d'erreur */
+  .diet-not-found {
+    text-align: center;
+    padding: 50px 20px;
+    background: #fff8e1;
+    border-radius: 12px;
+    margin: 50px auto;
+    max-width: 600px;
+    box-shadow: var(--shadow);
+  }
+  
+  .diet-not-found h2 {
+    color: #f44336;
+  }
+  
+  .back-to-quiz {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: var(--primary);
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  .back-to-quiz:hover {
+    background: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .diet-content-container {
+      grid-template-columns: 1fr;
+    }
+    
+    .diet-banner {
+      height: 300px;
+    }
+    
+    .diet-banner h1 {
+      font-size: 2rem;
+    }
+    
+    .macros-display {
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .macro-carbs, .macro-protein, .macro-fat {
+      margin: 5px 0;
+    }
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .diet-section {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+  
+  .diet-section:nth-child(2) { animation-delay: 0.1s; }
+  .diet-section:nth-child(3) { animation-delay: 0.2s; }
+  .diet-section:nth-child(4) { animation-delay: 0.3s; }

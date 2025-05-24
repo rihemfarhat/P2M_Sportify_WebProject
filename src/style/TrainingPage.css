@@ -1,0 +1,93 @@
+.training-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #ffffff;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.training-main {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 60px;
+  margin-bottom: 100px;
+  margin-top: 150px;
+}
+
+.text-section {
+  flex: 1;
+  padding: 80px 60px 80px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #030101;
+}
+
+.text-section h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.text-section p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin-bottom: 30px;
+}
+
+.start {
+  background: #000000;
+  border: 1px solid rgba(212, 11, 11, 0.2);
+  color: #fffcfc;
+  padding: 14px 28px;
+  font-size: 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.start:hover {
+  background: rgb(253, 135, 0);
+}
+
+.image-section {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.image-wrapper {
+  width: 90%;
+  max-width: 500px;
+  max-height: 600px;
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+  animation: neon-float 6s ease-in-out infinite;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border-radius: 30px;
+  filter: brightness(105%) contrast(110%) saturate(120%);
+}
+
+@keyframes neon-float {
+  0%, 100% {
+      transform: translateY(0px);
+      box-shadow: 0 0 40px rgba(0, 170, 255, 0.5);
+  }
+  50% {
+      transform: translateY(-10px);
+      box-shadow: 0 0 60px rgba(0, 170, 255, 0.8);
+  }
+}

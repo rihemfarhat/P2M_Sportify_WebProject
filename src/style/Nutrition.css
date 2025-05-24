@@ -1,0 +1,109 @@
+/* Conteneur principal */
+.nutrition-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Prend toute la hauteur de la fenêtre */
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Image de fond */
+.nutrition-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Assure que l'image couvre tout l'espace */
+  object-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Overlay semi-transparent */
+.nutrition-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Noir semi-transparent */
+  z-index: 1;
+}
+
+/* Contenu centré */
+.nutrition-content {
+  position: absolute;
+  top: 10%;
+  left: 3%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 1200px;
+  text-align: center;
+  color: white;
+  z-index: 2;
+  padding: 20px;
+}
+
+/* Styles du texte */
+.nutrition-title {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.nutrition-subtitle {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.nutrition-text {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Bouton */
+.nutrition-button {
+  display: inline-block;
+  padding: 12px 30px;
+  background: linear-gradient(to right, #4361ee, #4cc9f0);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.nutrition-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nutrition-title {
+    font-size: 2.5rem;
+  }
+  
+  .nutrition-subtitle {
+    font-size: 1.5rem;
+  }
+  
+  .nutrition-text {
+    font-size: 1rem;
+  }
+  
+  .nutrition-button {
+    padding: 10px 25px;
+    font-size: 1rem;
+  }
+}

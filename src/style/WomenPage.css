@@ -1,0 +1,232 @@
+.women-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Navbar */
+.navbar-women {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(245, 210, 220, 0.85); /* Teinte plus féminine */
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    height: 80px;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+.nav-links-women {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links-women a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-buttons-women,
+.nav-buttons-coach-women {
+    background-color: #000;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.login-btn-women,
+.login-btn-coach-women {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-left: 20px;
+    margin-right: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-women .logo-women {
+    width: 150px;
+    height: 50px;
+    margin-top: 2px;
+}
+
+.nav-icons-women {
+    display: flex;
+    gap: 15px;
+    margin-left: 10px;
+}
+
+.search-form-women {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.search-input-women {
+    padding: 8px;
+    margin-right: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 200px;
+}
+
+.search-icon-btn-women {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* Main content */
+.women-main-content {
+    flex: 1;
+    padding: 100px 20px 50px;
+}
+
+.featured-women-equipment {
+    margin-top: 20px;
+}
+
+.section-title-women {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+    color: #222;
+}
+
+.section-title-women::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #e63477;
+    margin: 15px auto 0;
+}
+
+.women-equipment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.women-equipment-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.women-equipment-card:hover {
+    transform: scale(1.05);
+}
+
+.women-equipment-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.women-equipment-card h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.women-equipment-card p {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+}
+
+.women-equipment-card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background: #000000;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.women-equipment-card a:hover {
+    background: #e63477;
+}
+
+/* Pagination */
+.pagination-women {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    margin: 20px 0;
+}
+
+.pagination-women button {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border: 1px solid #ddd;
+    background-color: white;
+    color: #333;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.pagination-women button.active {
+    background-color: #000000;
+    color: white;
+    border-color: #000000;
+}
+
+.pagination-women button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.pagination-women button:last-child {
+    width: auto;
+    padding: 0 12px;
+    border-radius: 16px;
+}
+
+/* Footer */
+.footer-women {
+    background-color: #222;
+    color: white;
+    padding: 50px 0 20px;
+}
+
+.footer-women-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-women-section h4 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.footer-women-section h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 2px;
+    background: #e63477;
+}
+
+.footer-women-links a:hover {
+    color: white;
+}
